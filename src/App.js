@@ -1,44 +1,52 @@
 import React, { useState } from 'react'
-// import EmogiDisplay from './EmogiDisplay'
 const App = () => {
   const [emojiDictionary, setEmojiDictionary] = useState({
     '😄': 'simle',
     '😠': 'angry',
-    '😲': 'astonished'
+    '😲': 'astonished',
+    '😂': 'Tears of Joy '
   })
-  const [display, setDisplay] = useState('')
+  const [emojiMeaning, setEmojiMeaning] = useState('')
+  var faceEmoji = Object.keys(emojiDictionary)
   const handleChange = e => {
     let userInput = e.target.value
     if (userInput !== '') {
       let meaning = emojiDictionary[userInput]
-      setDisplay(meaning)
+      if (meaning === undefined) {
+        console.log('Emoji not found in our data emojiDictionary ')
+      }
+      setEmojiMeaning(userInput)
     } else {
-      console.log(emojiDictionary[userInput])
-      console.log(emojiDictionary.userInput)
+      setEmojiMeaning('Output will shown here : ')
     }
   }
-  var emojiKey = Object.keys(emojiDictionary)
-  console.log(emojiKey)
-  const emojiValue = emojiKey => {
-    // console.log(emojiDictionary[emojiKey])
-    setDisplay(emojiDictionary[emojiKey])
+
+  const emojiClickHandler = emoji => {
+    setEmojiMeaning(emojiDictionary[emoji])
   }
 
   return (
     <div>
-      <h1>Flag React</h1>
-      <input type='text' onChange={handleChange} />
-      <h1>{display}</h1>
+      <h1>Emoji Basket </h1>
+      <input
+        type='text'
+        onChange={handleChange}
+        placeholder='Enter emoji or click on any emoji'
+      />
+      <h1>
+        Name this emoji <span>{emojiMeaning} hii</span>
+        {/* {console.log(emojiMeaning)} */}
+      </h1>
 
-      {emojiKey.map(emojiKey => {
+      {faceEmoji.map(emoji => {
         return (
           <p
-            key={emojiKey}
+            key={emoji}
             onClick={() => {
-              emojiValue(emojiKey)
+              emojiClickHandler(emoji)
             }}
           >
-            {emojiKey}{' '}
+            {emoji}{' '}
           </p>
         )
       })}
