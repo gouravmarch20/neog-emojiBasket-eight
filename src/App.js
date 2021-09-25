@@ -49,7 +49,7 @@ const App = () => {
         onChange={handleChange}
         placeholder='Enter emoji or click on any emoji'
       />
-      <h1>Name of this emoji is</h1>
+      <h1>Translation will appear here..</h1>
       <h3 className='heading-three'> {emojiMeaning} </h3>
       <div className='emoji-data'>
         <ul className='list-non-bullet'>
