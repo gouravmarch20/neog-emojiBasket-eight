@@ -5,7 +5,11 @@ const App = () => {
     '😄': 'simle',
     '😠': 'angry',
     '😲': 'astonished',
-    '😂': 'Tears of Joy '
+    '😂': 'Tears of Joy ',
+    '😋': 'Tears of Joy ',
+    '🤑': 'money mouth face ',
+    '😈': 'Angry Face With Horns ',
+    '😴': 'Sleeping '
   })
 
   const [emojiMeaning, setEmojiMeaning] = useState('')
@@ -33,14 +37,20 @@ const App = () => {
 
   return (
     <div className='container'>
-      <h1 className='heading-one'>Emoji Basket </h1>
+    <header>
+
+      <h1 className='hero-heading'>Emoji Basket </h1>
+    </header>
+
+
+
       <input
         type='text'
         onChange={handleChange}
         placeholder='Enter emoji or click on any emoji'
       />
       <h1>Name of this emoji is</h1>
-      <h3 className="heading-three"> {emojiMeaning} </h3>
+      <h3 className='heading-three'> {emojiMeaning} </h3>
       <div className='emoji-data'>
         <ul className='list-non-bullet'>
           {faceEmoji.map(emoji => {

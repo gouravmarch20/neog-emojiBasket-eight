@@ -2,10 +2,22 @@
   --warning-color: #f7cd2e;
   --secondary-color: #ddd101;
   --info-color: #3944f7;
+  --dark-blue: #03203c;
+}
+input {
+  padding: 1rem;
+  border-radius: 3rem;
 }
 
 body {
-  background-color: var(--warning-color);
+  background-color: var(--dark-blue);
+}
+h1 {
+  color: var(--info-color);
+}
+.hero-heading {
+  text-align: center;
+  color: var(--warning-color);
 }
 .container {
   display: flex;
@@ -16,6 +28,7 @@ body {
 }
 .emoji-data {
   background-color: var(--secondary-color);
+  border-radius: 40%;
   width: 100%;
   display: inline-block;
 }
@@ -31,10 +44,11 @@ body {
   cursor: pointer;
   font-size: 2rem;
 }
-.heading-one {
-  color: var(--info-color);
-}
+
 .heading-three {
   color: var(--info-color);
   text-transform: uppercase;
+  background-color: #207398;
+  padding: 3rem;
+  border-radius: 80%;
 }
