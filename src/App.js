@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import './App.css'
+import Footer from './Footer'
 const App = () => {
   const [emojiDictionary, setEmojiDictionary] = useState({
     '😄': 'simle',
-    '😠': 'angry',
+    '😠': 'Angry',
     '😲': 'astonished',
     '😂': 'Tears of Joy ',
-    '😋': 'Tears of Joy ',
-    '🤑': 'money mouth face ',
-    '😈': 'Angry Face With Horns ',
-    '😴': 'Sleeping '
+    '😋': 'Hungry ',
+    '🤑': 'Rich ',
+    '😈': 'Angry Face  ',
+    '😴': 'Sleeping ',
+    '😎': 'Sunglasses ',
+    '😍': 'Heart Face ',
+
   })
 
   const [emojiMeaning, setEmojiMeaning] = useState('')
@@ -37,19 +41,14 @@ const App = () => {
 
   return (
     <div className='container'>
-    <header>
-
-      <h1 className='hero-heading'>Emoji Basket </h1>
-    </header>
-
-
-
+      <header>
+        <h1 className='hero-heading'>Emoji Basket </h1>
+      </header>
       <input
         type='text'
         onChange={handleChange}
         placeholder='Enter emoji or click on any emoji'
       />
-      <h1>Translation will appear here..</h1>
       <h3 className='heading-three'> {emojiMeaning} </h3>
       <div className='emoji-data'>
         <ul className='list-non-bullet'>
@@ -68,6 +67,7 @@ const App = () => {
           })}
         </ul>
       </div>
+      <Footer />
     </div>
   )
 }
