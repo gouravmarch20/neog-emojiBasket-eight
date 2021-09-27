@@ -13,7 +13,10 @@ const App = () => {
     '😴': 'Sleeping ',
     '😎': 'Sunglasses ',
     '😍': 'Heart Face ',
-
+    '🚀': 'Very quickly ',
+    '🔥': 'fire ',
+    '🥳': 'celebrating joyous occasion ',
+    '🤩': 'beloved celebrity '
   })
 
   const [emojiMeaning, setEmojiMeaning] = useState('')
