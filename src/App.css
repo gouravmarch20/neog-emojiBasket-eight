@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fde047;
+  --secondary-color: #facc15;
+  --light-yellow: #e5d68a;
+  --dark-yellow: #854d0e;
+  --output-color: #fdf9c7;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0px;
+  background-color: var(--light-yellow);
+  animation: myanimation 10s infinite;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* container */
+.container {
+  padding: 0rem 1rem;
+}
+.container-center {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* section */
+.section {
+  padding: 0rem 1.5rem;
+}
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+}
+
+/* header */
+.hero {
+  padding: 2rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-heading {
+  color: var(--dark-yellow);
+  text-align: center;
+}
+
+@media only screen and (max-width: 520px) {
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .section {
+    padding: 0rem 0.5rem;
+  }
+}
+
+.container input {
+  width: 90%;
+  max-width: 320px;
+  min-height: 20px;
+  padding: 1rem;
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid var(--dark-yellow);
+}
+
+.container p {
+  padding: 0rem 1rem;
+}
+.container-ul {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.list-non-bullet {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0rem;
+  justify-content: center;
+}
+.list-item-inline {
+  padding: 1.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.outputDiv {
+  width: 90%;
+  max-width: 320px;
+  min-height: 100px;
+  background-color: var(--output-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.outputDiv p {
+  margin-top: 0rem;
+  color: var(--dark-yellow);
+}
+
+.footer {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #edbf69;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.footer a {
+  color: dodgerblue;
+}
+
+.footer .list-non-bullet {
+  list-style: none;
+}
+.footer .list-item-inline {
+  display: inline;
+  padding: 0rem 0.8rem;
+}
+@keyframes myanimation {
+  30% {
+    background-color: #f4ce6a;
+  }
+
+  100% {
+    background-color: #d9d55b;
+  }
+}
