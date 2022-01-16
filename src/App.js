@@ -35,7 +35,7 @@ const App = () => {
     let userInput = e.target.value;
     if (userInput !== "") {
       let meaning = emojiDictionary[userInput];
-      if (meaning !== undefined) {
+      if (meaning === undefined) {
         meaning = "We don't have this in our database.";
 
       }
@@ -107,7 +107,7 @@ const App = () => {
             <a
               target="_blank"
               class="link"
-              href="https://www.instagram.com/gouravmarch20/"
+              href="https://github.com/gouravmarch20"
               rel="noreferrer"
             >
               <i class="fab fa-github fa-1x"></i>
